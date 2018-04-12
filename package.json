@@ -6,6 +6,11 @@
   "author": "Clement Bresson",
   "license": "MIT",
   "bin": {
-    "hello-world": "bin/hello-world.js"
+    "generate-template": "bin/generate-template.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "commander": "^2.15.1",
+    "shelljs": "^0.8.1"
   }
 }
