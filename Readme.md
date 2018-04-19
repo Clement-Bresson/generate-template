@@ -41,10 +41,10 @@ After you created your common files templates:
 
 ## Command line options
 
-| command | options      | Description                                                |
-| :------ | :----------- | :--------------------------------------------------------- |
-| (empty) | --init or -i | Create `.templates` folder, along with an example template |
-| new     | (empty)      | Launch generator to create a new file                      |
+| command | alias | options | Description                                                |
+| :------ | :---- | :------ | :--------------------------------------------------------- |
+| init    | i     | none    | Create `.templates` folder, along with an example template |
+| new     | n     | none    | Launch generator to create a new file                      |
 
 ## Custom configuration
 
