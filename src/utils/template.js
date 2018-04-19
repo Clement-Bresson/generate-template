@@ -11,7 +11,11 @@ const mustache = require('mustache');
 
 const getTemplatesPaths = () => {
   const extension = resolveConfigValue('extension');
-  return glob.sync(`**/*${extension}.*`, { cwd: project.rootDir, dot: true });
+  return glob.sync(`**/*${extension}.*`, {
+    cwd: project.rootDir,
+    dot: true,
+    ignore: 'node_modules/**/*.*',
+  });
 };
 
 const extracTemplateNameFromPath = R.compose(getIndex(0), R.split('.'), R.last, R.split('/'));

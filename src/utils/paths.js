@@ -26,8 +26,6 @@ const resolveFromDefaults = resolveFrom(defaultsDir);
 const configDir = resolveFromRoot(CONFIGURATION_DIRECTORY);
 const resolveFromConfig = resolveFrom(configDir);
 
-const isPathValid = x => typeof x === 'string'; // to do: check if path seems really legit
-
 module.exports = {
   getCurrentPath,
   paths: {
@@ -45,7 +43,6 @@ module.exports = {
       rootDir,
     },
   },
-  isPathValid,
   resolveFrom,
   resolveFromRoot,
 };
