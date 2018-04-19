@@ -5,12 +5,41 @@
   "main": "index.js",
   "author": "Clement Bresson",
   "license": "MIT",
+  "keywords": ["generate", "template", "cli", "templates"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Clement-Bresson/generate-template"
+  },
+  "homepage": "https://github.com/Clement-Bresson/generate-template#readme",
+  "bugs": {
+    "url": "https://github.com/Clement-Bresson/generate-template/issues",
+    "email": "clement0bresson@gmail.com"
+  },
   "bin": {
     "generate-template": "bin/generate-template.js"
   },
+  "scripts": {
+    "lint": "yarn run eslint bin/*.js src/**/*.js"
+  },
+  "pre-commit": "lint",
   "dependencies": {
     "chalk": "^2.3.2",
     "commander": "^2.15.1",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "inquirer": "^5.2.0",
+    "mustache": "^2.3.0",
+    "ramda": "^0.25.0",
     "shelljs": "^0.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "pre-commit": "^1.2.2"
   }
 }

@@ -1,25 +1,25 @@
 const program = require('commander');
-const { CONFIGURATION_FILENAME } = require('../constants');
-const createConfigFile = require('../actions/create-config-file');
+const initialize = require('../actions/initialize');
+const newFile = require('../actions/new-file');
 
-const generateTemplate = () => {
-  program
-    .version('1.0.0')
-    .option('-i, --init', `Create ${CONFIGURATION_FILENAME} file`);
+module.exports = () => {
+  program.version('1.0.0').description('A highly customizable CLI to generate template files.');
 
   program
-    .command('new [name] <path>')
-    .description('Create a new template')
-    .action((name, path) => {
-      console.log(rootPath);
-    });
+    .command('new')
+    .alias('n')
+    .description('Start generator to create a new file from a template')
+    .action(newFile);
+
+  program
+    .command('init')
+    .alias('i')
+    .description('Initialize an empty .templates folder at your project root')
+    .action(initialize);
 
   program.parse(process.argv);
 
-  if (program.init) {
-    createConfigFile();
-    return;
+  if (program.args.length === 0) {
+    program.help();
   }
 };
-
-module.exports = generateTemplate;
