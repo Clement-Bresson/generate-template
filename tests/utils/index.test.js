@@ -1,4 +1,4 @@
-const u = require('./');
+const u = require('../../src/utils');
 const { expect } = require('chai');
 
 describe('Utils - index', () => {

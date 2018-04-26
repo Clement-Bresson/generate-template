@@ -3,8 +3,6 @@ const {
 } = require('fs-extra');
 const R = require('ramda');
 
-const fileorDirectoryExists = existsSync;
-
 const getParser = (type) => {
   switch (type) {
     case 'json':
@@ -43,5 +41,4 @@ module.exports = {
   createDirectoryIfDoesNotExist,
   getJSONFileContent,
   getTextFileContent,
-  fileorDirectoryExists,
 };

@@ -1,6 +1,6 @@
 {
   "name": "generate-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CLI Tool to generate templates files",
   "main": "index.js",
   "author": "Clement Bresson",
